@@ -1,0 +1,6 @@
+do_token = "your-digitalocean-personal-access-token"
+
+# Defaults are set in variables.tf — override here if needed:
+# image_slug          = "openclaw"        # verify with: doctl compute image list --public | grep openclaw
+# ssh_public_key_path = "~/.ssh/id_rsa.pub"
+# allowed_ssh_cidr    = "YOUR.IP.HERE/32" # update when your IP changes

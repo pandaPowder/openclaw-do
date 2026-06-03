@@ -1,0 +1,9 @@
+# Terraform state
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Secrets — copy terraform.tfvars.example → terraform.tfvars and fill in values
+terraform.tfvars
+*.auto.tfvars
