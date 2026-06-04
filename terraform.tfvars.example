@@ -1,7 +1,15 @@
 # Required values (keep only in local terraform.tfvars, never commit):
-do_token           = "your-digitalocean-personal-access-token"
-claude_oauth_token = "your-token-from-claude-setup-token"
-allowed_ssh_cidr   = "203.0.113.10/32" # replace with your current public IP/32
+do_token                  = "your-digitalocean-personal-access-token"
+claude_oauth_token        = "your-token-from-claude-setup-token"
+allowed_ssh_cidr          = "203.0.113.10/32" # replace with your current public IP/32
+
+# OpenClaw secrets (written to /opt/openclaw.env and openclaw.json):
+anthropic_api_key         = ""
+openclaw_gateway_token    = ""
+gog_keyring_password      = ""
+google_search_api_key     = ""
+google_oauth_client_id    = ""
+google_oauth_client_secret = ""
 
 # Optional overrides:
 # image_slug          = "openclaw"          # verify with: doctl compute image list --public | grep openclaw

@@ -43,3 +43,6 @@ After apply:
 - `terraform.tfvars` is gitignored — keep secrets there only.
 - Do not hardcode secrets in Terraform source files.
 - Restrict `allowed_ssh_cidr` to your current public IP whenever possible.
+
+## License
+MIT — see `LICENSE`.
