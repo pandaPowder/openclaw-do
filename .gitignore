@@ -7,3 +7,8 @@ terraform.tfstate.backup
 # Secrets — copy terraform.tfvars.example → terraform.tfvars and fill in values
 terraform.tfvars
 *.auto.tfvars
+
+# Private session/runtime notes (do not publish)
+HANDOFF.md
+handoff-*.md
+docs/morning-briefing-skill-deployment.md

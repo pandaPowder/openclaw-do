@@ -17,13 +17,17 @@ resource "digitalocean_ssh_key" "openclaw" {
 }
 
 resource "digitalocean_droplet" "openclaw" {
-  name     = "openclaw-prod"
-  region   = "sfo3"
-  size     = "s-2vcpu-4gb"
-  image    = var.image_slug
+  name   = "openclaw-prod"
+  region = "sfo3"
+  size   = "s-2vcpu-4gb"
+  image  = var.image_slug
 
   ssh_keys = [digitalocean_ssh_key.openclaw.fingerprint]
 
+  user_data = <<-EOF
+    #!/bin/bash
+    echo "CLAUDE_CODE_OAUTH_TOKEN=${var.claude_oauth_token}" >> /etc/environment
+  EOF
 }
 
 resource "digitalocean_firewall" "openclaw" {

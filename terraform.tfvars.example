@@ -1,6 +1,8 @@
-do_token = "your-digitalocean-personal-access-token"
+# Required values (keep only in local terraform.tfvars, never commit):
+do_token           = "your-digitalocean-personal-access-token"
+claude_oauth_token = "your-token-from-claude-setup-token"
+allowed_ssh_cidr   = "203.0.113.10/32" # replace with your current public IP/32
 
-# Defaults are set in variables.tf — override here if needed:
-# image_slug          = "openclaw"        # verify with: doctl compute image list --public | grep openclaw
-# ssh_public_key_path = "~/.ssh/id_rsa.pub"
-# allowed_ssh_cidr    = "YOUR.IP.HERE/32" # update when your IP changes
+# Optional overrides:
+# image_slug          = "openclaw"          # verify with: doctl compute image list --public | grep openclaw
+# ssh_public_key_path = "~/.ssh/id_rsa.pub" # path to your SSH public key

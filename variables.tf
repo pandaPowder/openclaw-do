@@ -16,8 +16,13 @@ variable "ssh_public_key_path" {
   default     = "~/.ssh/id_rsa.pub"
 }
 
-variable "allowed_ssh_cidr" {
-  description = "CIDR allowed to reach port 22. Update when your IP changes."
+variable "claude_oauth_token" {
+  description = "Long-lived Claude OAuth token from `claude setup-token`. Used to authenticate OpenClaw with your Claude Pro subscription."
   type        = string
-  default     = "71.195.226.15/32"
+  sensitive   = true
+}
+
+variable "allowed_ssh_cidr" {
+  description = "CIDR allowed to reach port 22 (recommended: your current public IP/32)."
+  type        = string
 }
